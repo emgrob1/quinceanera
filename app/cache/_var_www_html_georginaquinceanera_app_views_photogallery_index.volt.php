@@ -6,7 +6,7 @@
 	<div class="body clearfix">
 			
 			<p style="font-size:12px;">
-			RSVP
+			Photo Gallery
 			</p>
 		</div>
 	</div>

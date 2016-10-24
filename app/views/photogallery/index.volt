@@ -1,16 +1,16 @@
 <html>
-<?php echo $this->partial('partials/header'); ?>
+{{ partial('partials/header')}}
 
 <body>
 
 	<div class="body clearfix">
 			
 			<p style="font-size:12px;">
-			RSVP
+			Photo Gallery
 			</p>
 		</div>
 	</div>
-<?php echo $this->partial('partials/footer'); ?>
+{{partial('partials/footer')}}
 
 </body>
 </html>

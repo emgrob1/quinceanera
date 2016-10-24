@@ -88,9 +88,10 @@ img {
 	display: inline-block;
 	height: 30px;
 	list-style: none;
-	margin: 0 10px;
+	margin: 0px 10px 0px 41px;
 	padding: 0;
 *width: 516px; /** Needed for IE7 **/
+	
 }
 #navigation li {
 	float: left;
@@ -116,13 +117,13 @@ img {
 	padding: 56px 0 0;
 }
 #contents h1, #featured h3 {
-	color: #fbfdfd;
+	color: #c0c0c0;
 	font: italic 34px Georgia, "Times New Roman", Times, serif;
 	font-style: italic;
 	margin: 0 0 18px;
 }
 #contents p {
-	color: #e8eff4;
+	color:  #c0c0c0;
 	font-size: 14px;
 	line-height: 24px;
 	margin: 0;
@@ -130,7 +131,7 @@ img {
 	text-align: justify;
 }
 #contents p a {
-	color: #e8eff4;
+	color: #c0c0c0;
 }
 #contents p a:hover {
 	color: #0aa3fa;
@@ -153,7 +154,7 @@ img {
 	text-align: center;
 }
 #contents .click-here h1 {
-	color: white;
+color: #c0c0c0;
 	font-style: italic;
 	line-height: 36px;
 	margin: 18px 0;
@@ -162,7 +163,7 @@ img {
 #adbox {
 /**background: #020a13 url(../images/bg-adbox.jpg) no-repeat center top;**/
 	font-family: Georgia, "Times New Roman", Times, serif;
-	min-height: 433px;
+	min-height: 270px;
 	margin: -56px 0 22px;
 /** Needed for IE7 **/
 *margin: 0;
@@ -180,7 +181,7 @@ img {
 	overflow: hidden;
 }
 #adbox h1 {
-	color: #ffffff;
+	color: #c0c0c0;
 	font-size: 48px;
 	font-style: italic;
 	line-height: 50px;
@@ -204,9 +205,9 @@ img {
 }
 #adbox div.highlight h2 {
 	color: #484b4b;
-	font-size: 34px;
-	line-height: 54px;
-	width: 940px;
+	font-size: 48px;
+	line-height: 44px;
+	width: 1000px;
 	margin: 0 auto;
 	padding: 0 10px;
 	text-shadow: -3px 0 3px #121413;
@@ -542,4 +543,101 @@ img {
 	color: #03436f;
 	width: 460px;
 	margin-right: 10px;
+}
+
+/*rsvp css*/
+
+.div-table{
+  display:table;         
+  width: 921pX;         
+  background-color:#eee;         
+  border:1px solid  #666666;         
+  border-spacing:5px;/*cellspacing:poor IE support for  this*/
+ padding:2px;
+ font-size:20px;
+	font-style:italic;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.div-table-row{
+  display:table-row;
+  width:auto;
+  clear:both;
+  padding:5px;
+}
+.div-table_i{
+  display:table;         
+  width:auto;         
+     background-color:white;
+  border:1px solid  #337ab7;         
+  border-spacing:5px;/*cellspacing:poor IE support for  this*/
+ padding:2px;
+ font-size:20px;
+	font-style:italic;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	margin-left:3%;
+}
+
+
+@media screen and (min-width: 1800px) {
+  .div-table_i {
+      	margin-left:7%;
+    }
+}
+
+.div-table-row_i{
+  display:table-row;
+  width:auto;
+  clear:both;
+  padding:5px;
+}
+.div-table-col{
+  float:left;/*fix for  buggy browsers*/
+  display:table-column;         
+  width:150px;         
+  
+   padding:2px;
+     
+}
+.div-table-col1{
+  float:right;/*fix for  buggy browsers*/
+  display:table-column;         
+  width:150px;  
+   
+
+  
+}
+.div-table-col2{
+  float:right;/*fix for  buggy browsers*/
+  display:table-column;         
+  width:900px; 
+  margin-left:8px;        
+ 
+}
+
+.div-table-col_i{
+  float:left;/*fix for  buggy browsers*/
+  display:table-column;         
+  width:270px; 
+  margin-left:-5px;        
+ 
+}
+
+.div-table-cell{
+	padding:2px;
+}
+.online
+{
+	float:right;
+	width:100%;		
+	
+}
+/*rsvp css*/
+.text_color
+{
+	color:#0047AB;
+}
+
+div .spacer 
+{
+	height:30px;
 }

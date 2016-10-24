@@ -6,8 +6,8 @@
 	<div class="body clearfix">
 			
 			<p style="font-size:12px;">
-			RSVP
-			</p>
+My Story		
+	</p>
 		</div>
 	</div>
 <?php echo $this->partial('partials/footer'); ?>

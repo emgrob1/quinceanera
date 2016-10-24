@@ -1,3 +1,13 @@
+<html>
+<?php echo $this->partial('partials/header'); ?>
+
+<body>
+	<div class="body clearfix">
+
+  <div class="div-table">
+
+ <div class="headRow">
+
 <h3>Profile page</h3>
 
 	<form id='register' action = 'register/submit' method='post'
@@ -19,4 +29,12 @@
 
 </fieldset>
 </form>
+	</div>
+	</div>
+	</div>
+	<div class="spacer">
+</div>
+<?php echo $this->partial('partials/footer'); ?>
 
+</body>
+</html>

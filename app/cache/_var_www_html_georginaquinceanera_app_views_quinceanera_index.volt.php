@@ -5,9 +5,9 @@
 
 	<div class="body clearfix">
 			
-			<p style="font-size:12px;">
-			RSVP
-			</p>
+			<h2 style="font-size:12px;">
+			Quinceanera
+			</h2>
 		</div>
 	</div>
 <?php echo $this->partial('partials/footer'); ?>
