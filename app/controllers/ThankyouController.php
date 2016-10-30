@@ -1,12 +1,14 @@
 <?php
+session_start();
+class ThankyouController extends \Phalcon\Mvc\Controller {
 
-class ThankyouController extends \Phalcon\Mvc\Controller
-{
+	public function indexAction() {
+		if ($_SESSION['auth'] == 'auth') {
 
-    public function indexAction()
-    {
-
-    }
+			
+		} else {
+			header('location:/georginaquinceanera/login');
+		}
+	}
 
 }
-

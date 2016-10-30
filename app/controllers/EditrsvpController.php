@@ -1,11 +1,11 @@
 <?php
 session_start();
-class MystoryController extends \Phalcon\Mvc\Controller
+class EditrsvpController extends \Phalcon\Mvc\Controller
 {
 
     public function indexAction()
     {
-if($_SESSION['auth'] == 'auth')
+		if($_SESSION['auth'] == 'auth')
     	{
 		echo $this->view->render('contact', 'index');
 		

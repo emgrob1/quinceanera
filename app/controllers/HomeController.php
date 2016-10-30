@@ -1,12 +1,17 @@
 <?php
+session_start();
+class HomeController extends \Phalcon\Mvc\Controller {
 
-class HomeController extends \Phalcon\Mvc\Controller
-{
+	public function indexAction() 
+	{
+		if ($_SESSION['auth'] == 'auth') {
+			$this -> view -> render('home', 'index');
 
-    public function indexAction()
-    {
-		echo $this->view->render('index', 'index');
-    }
+		} else {
+
+			header('location:/georginaquinceanera/login');
+		}
+
+	}
 
 }
-

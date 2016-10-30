@@ -2,7 +2,7 @@
 
 use Phalcon\Mvc\Model\Validator\Email as Email;
 
-class Users extends \Phalcon\Mvc\Model
+class Rsvp extends \Phalcon\Mvc\Model
 {
 
     /**
@@ -15,7 +15,25 @@ class Users extends \Phalcon\Mvc\Model
      *
      * @var string
      */
+    public $attending;
+
+    /**
+     *
+     * @var integer
+     */
+    public $number_of_guest;
+
+    /**
+     *
+     * @var string
+     */
     public $first_name;
+
+    /**
+     *
+     * @var string
+     */
+    public $last_name;
 
     /**
      *
@@ -53,14 +71,14 @@ class Users extends \Phalcon\Mvc\Model
      */
     public function getSource()
     {
-        return 'users';
+        return 'rsvp';
     }
 
     /**
      * Allows to query a set of records that match the specified conditions
      *
      * @param mixed $parameters
-     * @return Users[]
+     * @return Rsvp[]
      */
     public static function find($parameters = null)
     {
@@ -71,7 +89,7 @@ class Users extends \Phalcon\Mvc\Model
      * Allows to query the first record that match the specified conditions
      *
      * @param mixed $parameters
-     * @return Users
+     * @return Rsvp
      */
     public static function findFirst($parameters = null)
     {

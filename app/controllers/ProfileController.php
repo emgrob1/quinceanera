@@ -8,5 +8,9 @@ class ProfileController extends \Phalcon\Mvc\Controller
 
     }
 
+	public function submitAction()
+	{
+		echo 'submit';
+	}
 }
 

@@ -2,20 +2,14 @@
 
 use Phalcon\Mvc\Model\Validator\Email as Email;
 
-class Users extends \Phalcon\Mvc\Model
+class Temp extends \Phalcon\Mvc\Model
 {
-
-    /**
-     *
-     * @var integer
-     */
-    public $id;
 
     /**
      *
      * @var string
      */
-    public $first_name;
+    public $name;
 
     /**
      *
@@ -53,14 +47,14 @@ class Users extends \Phalcon\Mvc\Model
      */
     public function getSource()
     {
-        return 'users';
+        return 'temp';
     }
 
     /**
      * Allows to query a set of records that match the specified conditions
      *
      * @param mixed $parameters
-     * @return Users[]
+     * @return Temp[]
      */
     public static function find($parameters = null)
     {
@@ -71,7 +65,7 @@ class Users extends \Phalcon\Mvc\Model
      * Allows to query the first record that match the specified conditions
      *
      * @param mixed $parameters
-     * @return Users
+     * @return Temp
      */
     public static function findFirst($parameters = null)
     {

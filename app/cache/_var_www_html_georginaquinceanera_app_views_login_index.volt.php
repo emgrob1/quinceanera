@@ -1,4 +1,16 @@
-<form id='login' action='login/submit' method='post' accept-charset='UTF-8'>
+<html>
+<?php echo $this->partial('partials/startheader'); ?>
+
+<body>
+	<div class="body clearfix">
+
+  <div class="div-table">
+
+ <div class="headRow">
+ 
+ <h3>Login page</h3>
+
+<form id='login' action='login/login' method='post' accept-charset='UTF-8'>
 <fieldset >
 <legend>Login</legend>
 <input type='hidden' name='submitted' id='submitted' value='1'/>
@@ -13,3 +25,12 @@
  
 </fieldset>
 </form>
+</div>
+	</div>
+	</div>
+	<div class="spacer">
+</div>
+<?php echo $this->partial('partials/footer'); ?>
+
+</body>
+</html>

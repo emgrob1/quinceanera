@@ -49,9 +49,9 @@
 									var e = document.getElementById('attendingRSPV');
 									var strUser = e.options[e.selectedIndex].text;
 				             	if(strUser == 'No')
-				             	document.getElementById('guest_num').style.visibility="hidden";
+				             	document.getElementById('number_of_guest').style.visibility="hidden";
 				         else
-				         	document.getElementById('guest_num').style.visibility="visible";
+				         	document.getElementById('number_of_guest').style.visibility="visible";
 				             }
 				             	
 				             </script> 
@@ -65,7 +65,7 @@
 				                   <div class="div-table-col1">
 				                   <div class="divCell">
 				                     
-										<select name="num_of_guest" id="guest">
+										<select name="number_of_guest" id="guest">
 											<option value="0">0</option>
 							               	<option value="1">1</option>
 							               	<option value="2">2</option>
@@ -110,7 +110,7 @@
 				          <div class="div-table-cell">Street Address</div>
 				            </div>
 				            <div class="div-table-col1">  
-				          <div class="div-table-cell"><input name="address" /></div>
+				          <div class="div-table-cell"><input name="address_line_1" /></div>
 				          </div>
 				          </div>
 				             <div class="div-table-row">
@@ -118,7 +118,7 @@
 				          <div class="div-table-cell">2nd Street Address</div>
 				           </div>
 				            <div class="div-table-col1">  
-				          <div class="div-table-cell"><input name="address2" /></div>
+				          <div class="div-table-cell"><input name="address_line_2" /></div>
 				           </div>
 				          </div>
 				          
@@ -208,7 +208,7 @@
 				          <div class="div-table-cell">Contact Number</div>
 				          </div>
 				            <div class="div-table-col1"> 
-				          <div class="div-table-cell"><input name="contact_num" /></div>
+				          <div class="div-table-cell"><input name="phone_number" /></div>
 				          </div>
 				          </div>
 				          
