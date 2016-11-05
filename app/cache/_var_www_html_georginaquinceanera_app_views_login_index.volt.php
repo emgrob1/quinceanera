@@ -30,7 +30,7 @@
 	</div>
 	<div class="spacer">
 </div>
-<?php echo $this->partial('partials/footer'); ?>
+
 
 </body>
 </html>

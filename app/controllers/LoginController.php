@@ -32,8 +32,11 @@ class LoginController extends \Phalcon\Mvc\Controller
 			
 			 if($user != FALSE)
 			 {
-				 
-				$_SESSION['auth'] = 'auth';
+			 	
+				 $this->session->set("auth", "auth");
+				  $this->session->set("username", $username);
+				   $this->session->set("password", $password);			
+			   $this->session->set("email", $password);	
 			// forward to home if user is valid
 				header('location:/georginaquinceanera/home');
 				

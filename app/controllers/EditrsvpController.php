@@ -7,14 +7,35 @@ class EditrsvpController extends \Phalcon\Mvc\Controller
     {
 		if($_SESSION['auth'] == 'auth')
     	{
-		echo $this->view->render('contact', 'index');
 		
+		$this->editAction();
 		}
 		else 
 		{
 				 header('location:/georginaquinceanera/login');	
 		}
     }
+
+	private function editAction($email)
+	{
+		if (!$this->request->isPost())
+		{
+		$editForm = rsvp::findFirstById($email);
+		
+		
+		if(!$editForm)
+		{
+			 header('location:/georginaquinceanera/creatersvp');	
+		}
+		
+		{
+			echo $this->view->render('editrsvp', 'index');
+			
+		}	
+	}
+	}
+	
+
 
 }
 

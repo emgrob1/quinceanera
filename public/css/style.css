@@ -631,7 +631,7 @@ color: #c0c0c0;
 	width:100%;		
 	
 }
-/*rsvp css*/
+/* rsvp css */
 .text_color
 {
 	color:#0047AB;
@@ -640,4 +640,10 @@ color: #c0c0c0;
 div .spacer 
 {
 	height:30px;
+}
+
+/* directions map */
+.directions
+{
+	text-align: center;
 }

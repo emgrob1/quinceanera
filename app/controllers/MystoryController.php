@@ -7,7 +7,7 @@ class MystoryController extends \Phalcon\Mvc\Controller
     {
 if($_SESSION['auth'] == 'auth')
     	{
-		echo $this->view->render('contact', 'index');
+		echo $this->view->render('mystory', 'index');
 		
 		}
 		else 

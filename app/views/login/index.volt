@@ -30,7 +30,7 @@
 	</div>
 	<div class="spacer">
 </div>
-{{partial('partials/footer')}}
+
 
 </body>
 </html>

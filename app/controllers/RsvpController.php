@@ -3,11 +3,27 @@ session_start();
 use Phalcon\Mvc\Url;
 class RsvpController extends \Phalcon\Mvc\Controller {
 	public function indexAction() {
-		if ($_SESSION['auth'] == 'auth') {
+		//$this->var = $this->getCreds();
+		if ($this -> session -> has("auth")) {
 
-			
+			$this -> checkRsvpAction();
 		} else {
 			header('location:/georginaquinceanera/login');
+		}
+	}
+
+	private function checkRsvpAction() {
+		if (!$this -> request -> isPost()) {
+			// get data from user
+			$email = $_SESSION['email'];
+			// find user in database
+			$user = Rsvp::findFirst(array("email = :email:", "bind" => array("email" => $email, )));
+
+			if ($user != FALSE) {
+				header('location:/georginaquinceanera/editrsvp');
+			} else {
+				header('location:/georginaquinceanera/creatersvp');
+			}
 		}
 	}
 

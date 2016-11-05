@@ -6,11 +6,11 @@
 	<div class="body clearfix">
 			
 			<p style="font-size:12px;">
-My Story		
+To be continued ...	
 	</p>
 		</div>
 	</div>
 <?php echo $this->partial('partials/footer'); ?>
 
 </body>
-</html>
+</html>s
