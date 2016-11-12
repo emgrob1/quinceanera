@@ -1,6 +1,6 @@
 
 <html>
-<?php echo $this->partial('partials/header'); ?>
+{{ partial('partials/header')}}
 
 <body>
 	<div class="body clearfix">
@@ -13,7 +13,7 @@
                 </div>
                 </div>
       
-             <form method = "post" action="rsvp/submit">  
+             <form method = "post" action="sampleform/test">  
                   <div class="div-table">
                   
              <div class="div-table-row"> 
@@ -41,7 +41,7 @@
 				                </div>                  
 				                 <div class="div-table-col1">         
 				               <div class="div-table-cell">
-				        <?php echo $this->tag->selectStatic(array('attending', array('1' => 'Yes', '0' => 'No'))); ?>
+				        {{ select_static('attending', ['1' : 'Yes','0' : 'No'])}}
 </div>
 				               </div>
 				              </div>
@@ -52,7 +52,7 @@
 				                </div>                  
 				                 <div class="div-table-col1">         
 				               <div class="div-table-cell">
-				        <?php echo $this->tag->selectStatic(array('number_of_guest', array('0' => '0', '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5'))); ?>
+				        {{ select_static('number_of_guest', ['0' : '0','1' : '1', '2' : '2', '3' : '3', '4' : '4', '5' : '5']) }}
 				           </div> 
 				</div>
 				               </div>
@@ -63,7 +63,7 @@
 				                </div>                  
 				                 <div class="div-table-col1">         
 				               <div class="div-table-cell">
-				    <?php echo $this->tag->textField(array('first_name', 'size' => 32)); ?>
+				    {{ text_field("first_name", "size": 32) }}
 				     </div>
 				     </div>
 				               </div>
@@ -74,7 +74,7 @@
 				                </div>                  
 				                 <div class="div-table-col1">         
 				               <div class="div-table-cell">
-				    <?php echo $this->tag->textField(array('last_name', 'size' => 42)); ?>
+				    {{ text_field("last_name", "size": 42) }}
 				     </div>
 				     </div>
 				               </div>
@@ -85,7 +85,7 @@
 				                </div>                  
 				                 <div class="div-table-col1">         
 				               <div class="div-table-cell">
-				    <?php echo $this->tag->textField(array('address_line_1', 'size' => 50)); ?>
+				    {{ text_field("address_line_1", "size": 50) }}
 				     </div>
 				     </div>
 				               </div>
@@ -96,7 +96,7 @@
 				                </div>                  
 				                 <div class="div-table-col1">         
 				               <div class="div-table-cell">
-				    <?php echo $this->tag->textField(array('address_line_2', 'size' => 10)); ?>
+				    {{ text_field("address_line_2", "size": 10) }}
 				     </div>
 				     </div>
 				               </div>
@@ -107,7 +107,7 @@
 				                </div>                  
 				                 <div class="div-table-col1">         
 				               <div class="div-table-cell">
-				    <?php echo $this->tag->textField(array('city', 'size' => 30)); ?>
+				    {{ text_field("city", "size": 30) }}
 				     </div>
 				     </div>
 				               </div>
@@ -118,7 +118,61 @@
 				                </div>                  
 				                 <div class="div-table-col1">         
 				               <div class="div-table-cell">
-				    <?php echo $this->tag->selectStatic(array('state', array('AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas', 'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut', 'DE' => 'Delaware', 'DC' => 'Dist of Columbia', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii', 'ID' => 'Idaho', 'IL' => 'Illinois', 'IN' => 'Indiana', 'IA' => 'Iowa', 'KS' => 'Kansas', 'KY' => 'Kentucky', 'LA' => 'Louisiana', 'ME' => 'Maine', 'MD' => 'Maryland', 'MA' => 'Massachusetts', 'MI' => 'Michigan', 'MN' => 'Minnesota', 'MS' => 'Mississippi', 'MO' => 'Missouri', 'MT' => 'Montana', 'NE' => 'Nebraska', 'NV' => 'Nevada', 'NH' => 'New Hampshire', 'NJ' => 'New Jersey', 'NM' => 'New Mexico', 'NY' => 'New York', 'NC' => 'North Carolina', 'ND' => 'North Dakota', 'OH' => 'Ohio', 'OK' => 'Oklahoma', 'OR' => 'Oregon', 'PA' => 'Pennsylvania', 'RI' => 'Rhode Island', 'SC' => 'South Carolina', 'SD' => 'South Dakota', 'TN' => 'Tennessee', 'TX' => 'Texas', 'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington', 'WV' => 'West Virginia', 'WI' => 'Wisconsin', 'WY' => 'Wyoming'))); ?>
+				    {{ select_static('state', [
+							 'AL': 'Alabama', 
+								 'AK' : 'Alaska', 
+								 'AZ' : 'Arizona', 
+								 'AR' : 'Arkansas', 
+								 'CA' : 'California', 
+								 'CO' : 'Colorado', 
+								 'CT' : 'Connecticut', 
+								 'DE' : 'Delaware', 
+								 'DC' : 'Dist of Columbia', 
+								 'FL' : 'Florida', 
+								 'GA' : 'Georgia', 
+								 'HI' : 'Hawaii', 
+								 'ID' : 'Idaho', 
+								 'IL' : 'Illinois', 
+								 'IN' : 'Indiana', 
+								 'IA' : 'Iowa', 
+								 'KS' : 'Kansas', 
+								 'KY' : 'Kentucky', 
+								 'LA' : 'Louisiana', 
+								 'ME' : 'Maine', 
+								 'MD' : 'Maryland', 
+								 'MA' : 'Massachusetts', 
+								 'MI' : 'Michigan', 
+								 'MN' : 'Minnesota', 
+								 'MS' : 'Mississippi', 
+								 'MO' : 'Missouri', 
+								 'MT' : 'Montana', 
+								 'NE' : 'Nebraska', 
+								 'NV' : 'Nevada', 
+								 'NH' : 'New Hampshire', 
+								 'NJ' : 'New Jersey', 
+								 'NM' : 'New Mexico', 
+								 'NY' : 'New York', 
+								 'NC' : 'North Carolina', 
+								 'ND' : 'North Dakota', 
+								 'OH' : 'Ohio', 
+								 'OK' : 'Oklahoma', 
+								 'OR' : 'Oregon', 
+								 'PA' : 'Pennsylvania', 
+								 'RI' : 'Rhode Island', 
+								 'SC' : 'South Carolina', 
+								 'SD' : 'South Dakota', 
+								 'TN' : 'Tennessee', 
+								 'TX' : 'Texas', 
+								 'UT' : 'Utah', 
+								 'VT' : 'Vermont', 
+								 'VA' : 'Virginia', 
+								 'WA' : 'Washington', 
+								 'WV' : 'West Virginia', 
+								 'WI' : 'Wisconsin', 
+								 'WY' : 'Wyoming'
+
+
+					]) }}
 				     
 				     </div>
 				     </div>
@@ -131,7 +185,7 @@
 				                </div>                  
 				                 <div class="div-table-col1">         
 				               <div class="div-table-cell">
-				    <?php echo $this->tag->textField(array('zip', 'size' => 10)); ?>
+				    {{ text_field("zip", "size": 10) }}
 				     </div>
 				     </div>
 				               </div>
@@ -143,7 +197,7 @@
 				                </div>                  
 				                 <div class="div-table-col1">         
 				               <div class="div-table-cell">
-				    <?php echo $this->tag->textField(array('email', 'size' => 35)); ?>
+				    {{ text_field("email", "size": 35) }}
 				     </div>
 				     </div>
 				               </div>
@@ -155,7 +209,7 @@
 				                </div>                  
 				                 <div class="div-table-col1">         
 				               <div class="div-table-cell">
-				    <?php echo $this->tag->textField(array('phone_number', 'size' => 12)); ?>
+				    {{ text_field("phone_number", "size": 12) }}
 				       </div>
 				 </div>
 		             </div>
@@ -170,7 +224,7 @@
 	</div>
 
 	</div>
-<?php echo $this->partial('partials/footer'); ?>
+{{partial('partials/footer')}}
 
 </body>
 </html>

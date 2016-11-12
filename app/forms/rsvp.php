@@ -1,63 +1,73 @@
 <?php
-
 use Phalcon\Forms\Form;
 use Phalcon\Forms\Element\Text;
+use Phalcon\Forms\Element\Hidden;
 use Phalcon\Forms\Element\Select;
+use Phalcon\Validation\Validator\Email;
+use Phalcon\Validation\Validator\PresenceOf;
+use Phalcon\Validation\Validator\Numericality;
 
-$form = new Form();
-
-$form->add(
-new Text
-("Attending")
-);
-
-$form->add(
-new Text
-("Number Of Guest")
-);
-
-$form->add(
-new Text
-("First Name")
-);
-
-$form->add(
-new Text
-("Last Name")
-);
-
-$form->add(
-new Text
-("Street Address")
-);
-
-$form->add(
-new Text
-("Street Address Line 2")
-);
-
-$form->add(
-new Text
-("City")
-);
-
-$form->add(
-new Text
-("State")
-);
-
-$form->add(
-new Text
-("Zip")
-);
-
-$form->add(
-new Text
-("Email")
-);
-
-$form->add(
-new Text
-("Phone Number")
-);
-
+class RsvpForm extends Form
+{
+    public function initialize()
+    {
+		$form = new Form();
+		
+		$form->add(
+		    new Text(
+		        "first_name"
+		    )
+		);
+		
+		$form->add(
+		    new Text(
+		        "last_name"
+		    )
+		);
+		
+		
+		
+		$form->add(
+		    new Text(
+		        "address_line_1"
+		    )
+		);
+		
+		$form->add(
+		    new Text(
+		        "address_line_2"
+		    )
+		);
+		
+		
+		$form->add(
+		    new Text(
+		        "city"
+		    )
+		);
+		
+		$form->add(
+		    new Text(
+		        "zip"
+		    )
+		);
+		
+		$form->add(
+		    new Text(
+		        "phone_number"
+		    )
+		);
+		
+		$form->add(
+		    new Text(
+		        "email"
+		    )
+		);
+		
+	
+		
+		
+	
+	}
+}
+    

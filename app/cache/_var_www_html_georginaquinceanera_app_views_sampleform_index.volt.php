@@ -13,7 +13,7 @@
                 </div>
                 </div>
       
-             <form method = "post" action="rsvp/submit">  
+             <form method = "post" action="sampleform/test">  
                   <div class="div-table">
                   
              <div class="div-table-row"> 

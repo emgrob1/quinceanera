@@ -7,8 +7,7 @@ class EditrsvpController extends \Phalcon\Mvc\Controller
     {
 		if($_SESSION['auth'] == 'auth')
     	{
-		
-		$this->editAction();
+			$this->viewPage();
 		}
 		else 
 		{
@@ -16,26 +15,35 @@ class EditrsvpController extends \Phalcon\Mvc\Controller
 		}
     }
 
-	private function editAction($email)
+	public function editAction()
 	{
-		if (!$this->request->isPost())
-		{
-		$editForm = rsvp::findFirstById($email);
+		$rsvp = Rsvp::find('id = 13');
+		$success = $rsvp -> update($this -> request -> getPost());
 		
-		
-		if(!$editForm)
-		{
-			 header('location:/georginaquinceanera/creatersvp');	
+	//	$success = $rsvp -> update($this -> request -> getPost(), array('attending', 'number_of_guest', 'first_name', 'last_name', 'address_line_1', 'address_line_2', 'city', 'state', 'zip', 'phone_number', 'email'));
+		if ($success) {
+			header('location:/georginaquinceanera/thankyou');
+		} else {
+			echo "Sorry, the following problems were generated: ";
+
+			$messages = $user -> getMessages();
+
+			foreach ($messages as $message) {
+				echo $message -> getMessage(), "<br/>";
+			}
 		}
-		
-		{
-			echo $this->view->render('editrsvp', 'index');
-			
-		}	
-	}
+
 	}
 	
+	private function viewPage()
+	{
+		$email_temp = $_SESSION['password'];
+		$rsvp = Rsvp::findFirst( "email = '$email_temp'");
+		
+		$this->view->post = $rsvp;
+	}
 
+	
 
 }
 

@@ -9,12 +9,13 @@
 
  <div class="headRow">
              	
-                <div class="div-table-cell" align="center"><div class="text_color"><font size="8">RSVP	</font></div></div>
-                
-             </div> 
-             <form method = "post" action="rsvp/submit">    
-              <div class="div-table">
-           
+                <div class="div-table-cell" align="center"><div class="text_color"><font size="8">RSVP	</font></div>
+                </div>
+                </div>
+      
+             <form method = "post" action="rsvp/submit">  
+                  <div class="div-table">
+                  
              <div class="div-table-row"> 
              	<div class="div-table-col2">
 				          
@@ -24,198 +25,195 @@
 				                <div class="divCell">If you've already submitted a RSVP you can edit, but the deadline to make changes is January 15, 2017</div>
 				
 				             </div>
-				               <div class="div-table-row">
+                    <div class="div-table-row">
 				            <div class="div-table-col">       
 				         
 				                </div>                  
 				                 <div class="div-table-col1">         
-				            <div class="div-table-cell"><input type="hidden" name="id" value="2-<?php echo $user_email; ?>" /></div>
+				            <div class="div-table-cell"><input type="hidden" name="id" /></div>
 				               </div>
-				              </div>
+				                 </div>
 				              
-				               
-				            <div class="div-table-row">
+				 <div class="div-table-row">
 				            <div class="div-table-col">       
-				                 <div class="div-table-cell">Attending?</div>
+				                 <div class="div-table-cell">  <label for="attending">Attending</label>
+				        </div>
 				                </div>                  
 				                 <div class="div-table-col1">         
-				               <div class="div-table-cell"><select id="attendingRSPV" name="attending" onchange="myFunction()">
-				               	<option value="1">Yes</option>
-				               	<option value="0">No</option>
-				               </select></div>
+				               <div class="div-table-cell">
+				        {{ select_static('attending', ['1' : 'Yes','0' : 'No'])}}
+</div>
 				               </div>
 				              </div>
-				             <script>
-				             function myFunction () {
-									var e = document.getElementById('attendingRSPV');
-									var strUser = e.options[e.selectedIndex].text;
-				             	if(strUser == 'No')
-				             	document.getElementById('number_of_guest').style.visibility="hidden";
-				         else
-				         	document.getElementById('number_of_guest').style.visibility="visible";
-				             }
-				             	
-				             </script> 
-				              <?php
-				             
-				              ?>
-				               <div class="div-table-row" id="guest_num">
+				             <div class="div-table-row" id="guest_num">
 				            		<div class="div-table-col">   
-				                  		<div class="div-table-cell">How Many Guest?</div>
-				                   </div>
-				                   <div class="div-table-col1">
-				                   <div class="divCell">
-				                     
-										<select name="number_of_guest" id="guest">
-											<option value="0">0</option>
-							               	<option value="1">1</option>
-							               	<option value="2">2</option>
-							               	<option value="3">3</option>
-							               	<option value="4">4</option>
-							               	<option value="5">5</option>
-						           		</select>									
-									</div>
-				            		</div>
-				              </div>       
-				                  
-				                  
-				                   <div class="div-table-row">
-				            		<div class="div-table-col">  
-				               <div class="div-table-cell">First Name</div>
+				                  		<div class="div-table-cell">  <label for="number_of_guest">Number of Guest</label>
+				        </div>
+				                </div>                  
+				                 <div class="div-table-col1">         
+				               <div class="div-table-cell">
+				        {{ select_static('number_of_guest', ['0' : '0','1' : '1', '2' : '2', '3' : '3', '4' : '4', '5' : '5']) }}
+				           </div> 
+				</div>
 				               </div>
-				               <div class="div-table-col1">  
-				                <div class="div-table-cell"><input name="first_name" /></div>
+				   <div class="div-table-row" id="guest_num">
+				            		<div class="div-table-col">   
+				                  		<div class="div-table-cell"> <label for="first_name">First Name</label>
+				    </div>
+				                </div>                  
+				                 <div class="div-table-col1">         
+				               <div class="div-table-cell">
+				    {{ text_field("first_name", "size": 32) }}
+				     </div>
+				     </div>
 				               </div>
+	   <div class="div-table-row" id="guest_num">
+				            		<div class="div-table-col">   
+				                  		<div class="div-table-cell">  <label for="last_name">Last Name</label>
+				 </div>
+				                </div>                  
+				                 <div class="div-table-col1">         
+				               <div class="div-table-cell">
+				    {{ text_field("last_name", "size": 42) }}
+				     </div>
+				     </div>
 				               </div>
-				               
-				                <div class="div-table-row">
-				            		<div class="div-table-col"> 
-				               <div class="div-table-cell">Last Name</div>
+		   <div class="div-table-row" id="guest_num">
+				            		<div class="div-table-col">   
+				                  		<div class="div-table-cell">  <label for="address_line_1">Street Address</label>
+				   </div>
+				                </div>                  
+				                 <div class="div-table-col1">         
+				               <div class="div-table-cell">
+				    {{ text_field("address_line_1", "size": 50) }}
+				     </div>
+				     </div>
 				               </div>
-				               	<div class="div-table-col1"> 
-				                <div class="div-table-cell"><input name="last_name" /></div>
-				                     </div>
-				                     </div>
-				              
-				               <div class="div-table-row">
-				            		<div class="div-table-col">  
-				          <div class="div-table-cell">Email Address</div>
-				          </div>
-				          	<div class="div-table-col1">  
-				          <div class="div-table-cell"><input name="email" /></div>
-				          </div>
-				          </div>
-				          
-				             <div class="div-table-row">
-				            		<div class="div-table-col">  
-				          <div class="div-table-cell">Street Address</div>
-				            </div>
-				            <div class="div-table-col1">  
-				          <div class="div-table-cell"><input name="address_line_1" /></div>
-				          </div>
-				          </div>
-				             <div class="div-table-row">
-				            		<div class="div-table-col"> 
-				          <div class="div-table-cell">2nd Street Address</div>
-				           </div>
-				            <div class="div-table-col1">  
-				          <div class="div-table-cell"><input name="address_line_2" /></div>
-				           </div>
-				          </div>
-				          
-				          
-				          <div class="div-table-row">
-				            		<div class="div-table-col"> 
-				          <div class="div-table-cell">City</div>
-				            </div>
-				            <div class="div-table-col1">  
-				          <div class="div-table-cell"><input name="city" /></div>
-				          </div>
-				          </div>
-				          <div class="div-table-row">
-				            		<div class="div-table-col"> 
-				          <div class="div-table-cell">State</div>
-				            </div>
-				            <div class="div-table-col1">  
-				          <div class="div-table-cell">
-								<select name="state" size="1">
-								 <option value="AL">Alabama</option>
-								 <option value="AK">Alaska</option>
-								 <option value="AZ">Arizona</option>
-								 <option value="AR">Arkansas</option>
-								 <option value="CA">California</option>
-								 <option value="CO">Colorado</option>
-								 <option value="CT">Connecticut</option>
-								 <option value="DE">Delaware</option>
-								 <option value="DC">Dist of Columbia</option>
-								 <option value="FL">Florida</option>
-								 <option value="GA">Georgia</option>
-								 <option value="HI">Hawaii</option>
-								 <option value="ID">Idaho</option>
-								 <option value="IL">Illinois</option>
-								 <option value="IN">Indiana</option>
-								 <option value="IA">Iowa</option>
-								 <option value="KS">Kansas</option>
-								 <option value="KY">Kentucky</option>
-								 <option value="LA">Louisiana</option>
-								 <option value="ME">Maine</option>
-								 <option value="MD">Maryland</option>
-								 <option value="MA">Massachusetts</option>
-								 <option value="MI">Michigan</option>
-								 <option value="MN">Minnesota</option>
-								 <option value="MS">Mississippi</option>
-								 <option value="MO">Missouri</option>
-								 <option value="MT">Montana</option>
-								 <option value="NE">Nebraska</option>
-								 <option value="NV">Nevada</option>
-								 <option value="NH">New Hampshire</option>
-								 <option value="NJ">New Jersey</option>
-								 <option value="NM">New Mexico</option>
-								 <option value="NY">New York</option>
-								 <option value="NC">North Carolina</option>
-								 <option value="ND">North Dakota</option>
-								 <option value="OH">Ohio</option>
-								 <option value="OK">Oklahoma</option>
-								 <option value="OR">Oregon</option>
-								 <option value="PA">Pennsylvania</option>
-								 <option value="RI">Rhode Island</option>
-								 <option value="SC">South Carolina</option>
-								 <option value="SD">South Dakota</option>
-								 <option value="TN">Tennessee</option>
-								 <option value="TX">Texas</option>
-								 <option value="UT">Utah</option>
-								 <option value="VT">Vermont</option>
-								 <option value="VA">Virginia</option>
-								 <option value="WA">Washington</option>
-								 <option value="WV">West Virginia</option>
-								 <option value="WI">Wisconsin</option>
-								 <option value="WY">Wyoming</option>
-								</select>
-								
-								</div>
-				          </div>
-				          </div>
-				            <div class="div-table-row">
-				            		<div class="div-table-col"> 
-				          <div class="div-table-cell">ZIP</div>
-				           </div>
-				            <div class="div-table-col1"> 
-				          <div class="div-table-cell"><input name="zip" /></div>   
-				           </div>
-				          </div>
-				          
-				            <div class="div-table-row">
-				            		<div class="div-table-col"> 
-				          <div class="div-table-cell">Contact Number</div>
-				          </div>
-				            <div class="div-table-col1"> 
-				          <div class="div-table-cell"><input name="phone_number" /></div>
-				          </div>
-				          </div>
-				          
-				              
-				                
-				             
+	   <div class="div-table-row" id="guest_num">
+				            		<div class="div-table-col">   
+				                  		<div class="div-table-cell"><label for="address_line_2">Address Line 2</label>
+				 </div>
+				                </div>                  
+				                 <div class="div-table-col1">         
+				               <div class="div-table-cell">
+				    {{ text_field("address_line_2", "size": 10) }}
+				     </div>
+				     </div>
+				               </div>
+		   <div class="div-table-row" id="guest_num">
+				            		<div class="div-table-col">   
+				                  		<div class="div-table-cell">    <label for="city">City</label>
+				   </div>
+				                </div>                  
+				                 <div class="div-table-col1">         
+				               <div class="div-table-cell">
+				    {{ text_field("city", "size": 30) }}
+				     </div>
+				     </div>
+				               </div>
+			   <div class="div-table-row" id="guest_num">
+				            		<div class="div-table-col">   
+				                  		<div class="div-table-cell">     <label for="state">State</label>
+				  </div>
+				                </div>                  
+				                 <div class="div-table-col1">         
+				               <div class="div-table-cell">
+				    {{ select_static('state', [
+							 'AL': 'Alabama', 
+								 'AK' : 'Alaska', 
+								 'AZ' : 'Arizona', 
+								 'AR' : 'Arkansas', 
+								 'CA' : 'California', 
+								 'CO' : 'Colorado', 
+								 'CT' : 'Connecticut', 
+								 'DE' : 'Delaware', 
+								 'DC' : 'Dist of Columbia', 
+								 'FL' : 'Florida', 
+								 'GA' : 'Georgia', 
+								 'HI' : 'Hawaii', 
+								 'ID' : 'Idaho', 
+								 'IL' : 'Illinois', 
+								 'IN' : 'Indiana', 
+								 'IA' : 'Iowa', 
+								 'KS' : 'Kansas', 
+								 'KY' : 'Kentucky', 
+								 'LA' : 'Louisiana', 
+								 'ME' : 'Maine', 
+								 'MD' : 'Maryland', 
+								 'MA' : 'Massachusetts', 
+								 'MI' : 'Michigan', 
+								 'MN' : 'Minnesota', 
+								 'MS' : 'Mississippi', 
+								 'MO' : 'Missouri', 
+								 'MT' : 'Montana', 
+								 'NE' : 'Nebraska', 
+								 'NV' : 'Nevada', 
+								 'NH' : 'New Hampshire', 
+								 'NJ' : 'New Jersey', 
+								 'NM' : 'New Mexico', 
+								 'NY' : 'New York', 
+								 'NC' : 'North Carolina', 
+								 'ND' : 'North Dakota', 
+								 'OH' : 'Ohio', 
+								 'OK' : 'Oklahoma', 
+								 'OR' : 'Oregon', 
+								 'PA' : 'Pennsylvania', 
+								 'RI' : 'Rhode Island', 
+								 'SC' : 'South Carolina', 
+								 'SD' : 'South Dakota', 
+								 'TN' : 'Tennessee', 
+								 'TX' : 'Texas', 
+								 'UT' : 'Utah', 
+								 'VT' : 'Vermont', 
+								 'VA' : 'Virginia', 
+								 'WA' : 'Washington', 
+								 'WV' : 'West Virginia', 
+								 'WI' : 'Wisconsin', 
+								 'WY' : 'Wyoming'
+
+
+					]) }}
+				     
+				     </div>
+				     </div>
+				               </div>
+				     
+				     <div class="div-table-row" id="guest_num">
+				            		<div class="div-table-col">   
+				                  		<div class="div-table-cell">    <label for="zip">Zip Code</label>
+				    </div>
+				                </div>                  
+				                 <div class="div-table-col1">         
+				               <div class="div-table-cell">
+				    {{ text_field("zip", "size": 10) }}
+				     </div>
+				     </div>
+				               </div>
+				     
+				      <div class="div-table-row" id="guest_num">
+				            		<div class="div-table-col">   
+				                  		<div class="div-table-cell">   <label for="email">Email</label>
+				   </div>
+				                </div>                  
+				                 <div class="div-table-col1">         
+				               <div class="div-table-cell">
+				    {{ text_field("email", "size": 35) }}
+				     </div>
+				     </div>
+				               </div>
+				     
+		   <div class="div-table-row" id="guest_num">
+				            		<div class="div-table-col">   
+				                  		<div class="div-table-cell">   <label for="phone_number">Contact Number</label>
+				 </div>
+				                </div>                  
+				                 <div class="div-table-col1">         
+				               <div class="div-table-cell">
+				    {{ text_field("phone_number", "size": 12) }}
+				       </div>
+				 </div>
+		             </div>
+		             
 				 <div class="div-table-row">         
 				<input class="push_button" type="submit" value="Submit" />
 				</div>
