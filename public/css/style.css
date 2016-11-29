@@ -7,7 +7,7 @@
 	font-style: normal;
 }
 body {
-	background: #0047ab;
+	background: #002366;
 	font-family: Arial, Helvetica, sans-serif;
 	min-width: 960px;
 	margin: 0;
@@ -72,7 +72,7 @@ img {
 }
 /*------------------------------ HEADER ------------------------------*/
 #header {
-	background: #0047ab;
+	background: #002366;
 	height: 50px;
 	padding: 16px 0 0;
 	text-align: right;
@@ -101,7 +101,7 @@ img {
 	margin-left: 0;
 }
 #navigation li a {
-	color: #0047ab;;
+	color: #002366;;
 	line-height: 30px;
 	padding: 0;
 	text-decoration: none;
@@ -112,7 +112,7 @@ img {
 }
 /*------------------------------ CONTENTS ------------------------------*/
 #contents {
-	background: #0047ab;
+	background: #002366;
 	margin: 0 0 24px;
 	padding: 56px 0 0;
 }
@@ -151,6 +151,7 @@ img {
 	height: 162px;
 	width: 301px;
 	margin-left: 20px;
+	margin-right: -26px;
 	text-align: center;
 }
 #contents .click-here h1 {
@@ -202,6 +203,9 @@ color: #c0c0c0;
 	border-style: solid none;
 	border-width: 1px;
 	border-radius:19px;
+	width: 940px;
+       margin: 0 auto;
+       padding: 0 10px;
 }
 #adbox div.highlight h2 {
 	color: #484b4b;
@@ -420,11 +424,14 @@ color: #c0c0c0;
 }
 /*------------------------------ FOOTER ------------------------------*/
 #footer {
-	background-color: #e8eff4;
+	background-color: #d9d9d7;
 	border-top: 1px solid #fdfcfc;
+	width: 940px;
+        margin: 0 auto;
+        padding: 0 10px;
 }
 #footer .body {
-	background: #072438 url(../images/bg-footer.jpg) no-repeat center top;
+	background: #002366 url(../images/bg-footer.jpg) no-repeat center top;
 	min-height: 136px;
 	padding: 36px 0;
 }
@@ -634,7 +641,7 @@ color: #c0c0c0;
 /* rsvp css */
 .text_color
 {
-	color:#0047AB;
+	color:#002366;
 }
 
 div .spacer 
@@ -646,4 +653,36 @@ div .spacer
 .directions
 {
 	text-align: center;
+}
+
+/*pages dynamic*/
+
+@media only screen and (max-width: 450px){
+    .div-table {
+      width: 268px;
+    }
+    #adbox div.highlight {
+    	width: 301px;
+    }
+    #adbox .info {
+    height: 197px;
+    margin-top: -50px;
+    overflow: hidden;
+    width: 301px;
+   
+}
+#adbox h1 {
+    color: #C0C0C0;
+    font-size: 48px;
+    font-style: italic;
+    line-height: 50px;
+    margin-bottom: 30px;
+     margin-left: 5px !important;
+}
+#contents {
+    background: #002366;
+    margin: 20px 60px 24px;
+    padding: 56px 0 0;
+}
+
 }

@@ -45,20 +45,7 @@
 				               </select></div>
 				               </div>
 				              </div>
-				             <script>
-				             function myFunction () {
-									var e = document.getElementById('attendingRSPV');
-									var strUser = e.options[e.selectedIndex].text;
-				             	if(strUser == 'No')
-				             	document.getElementById('number_of_guest').style.visibility="hidden";
-				         else
-				         	document.getElementById('number_of_guest').style.visibility="visible";
-				             }
-				             	
-				             </script> 
-				              <?php
-				             
-				              ?>
+				          
 				               <div class="div-table-row" id="guest_num">
 				            		<div class="div-table-col">   
 				                  		<div class="div-table-cell">How Many Guest?</div>

@@ -2,7 +2,11 @@
 <meta charset="utf-8">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="js/tool.js"></script>
+
 <link rel="stylesheet" href="css/style.css">
+
+ <link rel="stylesheet" type="text/css" href="./css/slick.css">
+ <link rel="stylesheet" type="text/css" href="./css/slick-theme.css">
 <title>georginaquinceanera.com</title>
  
  <head>
@@ -17,13 +21,10 @@
 			<div class="highlight">
 				<h2><ul id="navigation">
 				<li>
-					<a href="/georginaquinceanera/home">Home</a>
+					<a href="../georginaquinceanera/home">Home</a>
 				</li>
 				<li>
 					<a href="/georginaquinceanera/quinceanera">Quinceañera</a>
-				</li>
-				<li>
-					<a href="/georginaquinceanera/mystory">My Story</a>
 				</li>
 				<li>
 					<a href="/georginaquinceanera/photogallery">Photo Gallery</a>

@@ -1,3 +1,10 @@
+use Phalcon\Mvc\Url;
+
+$url = new Url();
+
+echo $url->getBaseUri();
+
+
 <html>
 <?php echo $this->partial('partials/header'); ?>
 

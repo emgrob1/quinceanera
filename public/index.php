@@ -28,8 +28,7 @@ $di->set(
     function () {
         $url = new Url();
 
-        $url->setBaseUri("/georginaquinceanera/");
-
+        $url->setBaseUri("/georginaquinceanera");
         return $url;
     }
 );

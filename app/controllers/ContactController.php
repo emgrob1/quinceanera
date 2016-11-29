@@ -1,6 +1,9 @@
 <?php
 session_start();
 class ContactController extends \Phalcon\Mvc\Controller
+
+
+
 {
 
     public function indexAction()

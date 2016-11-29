@@ -7,13 +7,16 @@
 		<div class="body clearfix">
 			<div class="click-here">
 				<h1>RSVP Here</h1>
-				<a href="/georginaquinceanera/rsvp" class="btn2">Click Here!</a>
+				<a href="/rsvp" class="btn2">Click Here!</a>
 			</div>
 			
 			
 			
-			<p style="font-size:12px;">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mi tortor. Phasellus commodo semper vehicula. Praesent aliquam semper massa et scelerisque. Suspendisse dapibus interdum diam, non varius nisl laoreet at. Pellentesque imperdiet molestie sollicitudin. Sed nec magna nibh, sed interdum nisi. Mauris vel pretium nibh. Morbi congue velit quis eros imperdiet ac el eifend elit condimentum. Nulla vestibulum dictum tellus quis iaculis. Duis a diam vitae sem tristique vestibulum. Praesent dapibus, tortor nec hendrerit pulvinar, lectus tortor viverra ante,
+			<p style="font-size:20px;">
+				Please join us March 18th, 2017, for the celebration of Georgina's Quinceañera.  The celebration will begin at 7:00 P.M. til 11:00 P.M.  </p>
+				
+				<p style="font-size:20px;">Thank you for visiting this site.  Here you'll be able to RSVP online and edit your RSVP.  </p>
+				<p style="font-size:20px;">We are planning of having an open bar for the first two hours.  Drink Fountain for the children.  Buffet style dinner with both American and Peruvian menu items.  Photo booth for memory keep sakes.
 			</p>
 		</div>
 	</div>

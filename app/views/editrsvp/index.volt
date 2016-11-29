@@ -50,20 +50,7 @@
 				               </select></div>
 				               </div>
 				              </div>
-				             <script>
-				             function myFunction () {
-									var e = document.getElementById('attendingRSPV');
-									var strUser = e.options[e.selectedIndex].text;
-				             	if(strUser == 'No')
-				             	document.getElementById('number_of_guest').style.visibility="hidden";
-				         else
-				         	document.getElementById('number_of_guest').style.visibility="visible";
-				             }
-				             	
-				             </script> 
-				              <?php
 				             
-				              ?>
 				               <div class="div-table-row" id="guest_num">
 				            		<div class="div-table-col">   
 				                  		<div class="div-table-cell">How Many Guest?</div>
@@ -107,7 +94,7 @@
 				          <div class="div-table-cell">Email Address</div>
 				          </div>
 				          	<div class="div-table-col1">  
-				          <div class="div-table-cell"><input name="email" value="{{post.email}}" /></div>
+				          <div class="div-table-cell"><input name="email" value="{{post.email}}" readonly/></div>
 				          </div>
 				          </div>
 				          
@@ -214,7 +201,7 @@
 				          <div class="div-table-cell">Contact Number</div>
 				          </div>
 				            <div class="div-table-col1"> 
-				          <div class="div-table-cell"><input name="phone_number" value="{{post.phone_number}}" /></div>
+				          <div class="div-table-cell"><input name="phone_number" id="txtPhoneNumber" value="{{post.phone_number}}" /></div>
 				          </div>
 				          </div>
 				          
@@ -222,7 +209,7 @@
 				                
 				             
 				 <div class="div-table-row">         
-				<input class="push_button" type="submit" value="Edit" />
+				<input class="push_button" type="submit" value="Save Edit" />
 				</div>
       </div>
        </div>

@@ -102,7 +102,9 @@
 				          <div class="div-table-cell">Email Address</div>
 				          </div>
 				          	<div class="div-table-col1">  
-				          <div class="div-table-cell"><input name="email" /></div>
+				          <div class="div-table-cell">
+<input name="email" value="<?php echo $post->email; ?>" readonly/>
+</div>
 				          </div>
 				          </div>
 				          
