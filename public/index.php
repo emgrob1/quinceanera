@@ -1,6 +1,4 @@
 <?php
-use Phalcon\Mvc\Url;
-
 
 error_reporting(E_ALL);
 
@@ -22,16 +20,6 @@ try {
      * Read services
      */
     include APP_PATH . "/app/config/services.php";
-
-$di->set(
-    "url",
-    function () {
-        $url = new Url();
-
-        $url->setBaseUri("/georginaquinceanera");
-        return $url;
-    }
-);
 
     /**
      * Handle the request
