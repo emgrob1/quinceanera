@@ -5,17 +5,20 @@ class GeneralsController extends \Phalcon\Mvc\Controller
 
     public function indexAction()
     {
-$temp_name = $_POST['army_names'];
-		echo ($temp_name);
-		//	$this->viewAction();
+    	$this->view = new selectGeneralsForm();
+		
+		$this->viewAction();
     }
+
 	
 	private function viewAction(){
-		
-		$temp_name = $_POST['army_names'];
-		var_dump($temp_name);
-	//$name = 'Army of The Potomac';
-	$name = 'Army of Northern Virginia';
+
+$test =	$this->view->getUsers = Army::find();	
+		//$temp_name = $this->setVar('army_names');
+		//$temp_name = 'Army of Northern Virginia';
+		var_dump ($test);
+	$name = 'Army of The Potomac';
+//	$name = 'Army of Northern Virginia';
 		$this->get_id_of_name($name);
 	}
 

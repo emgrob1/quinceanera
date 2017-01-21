@@ -1,9 +1,14 @@
+  
+
 <h2>Generals</h2>
 
+
 Select Army:
-	<select name ="army_names">
-	 <option value="Army of Northern Virginia">Army of Northern Virginia</option>
-	 <option value="Army of The Potomac">Army of The Potomac</option>
-	</select>
+<form method="post">
+Name:
+<?php echo $form->render('names'); ?>
+
+<?php echo $form->render('army_names'); ?>
+</form>
 
 <?php echo $post->general; ?>
