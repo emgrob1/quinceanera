@@ -31,6 +31,15 @@ class Army extends \Phalcon\Mvc\Model
         return 'army';
     }
 
+	public function initialize(){
+		$this->hasMany(
+		"id",
+		"generals",
+		"battle",
+		"army_id"
+		);
+	}
+
     /**
      * Allows to query a set of records that match the specified conditions
      *
